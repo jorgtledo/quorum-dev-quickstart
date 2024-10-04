@@ -2,6 +2,7 @@ import { resolve as resolvePath } from "path";
 import { readdirSync } from "fs";
 import { QuestionTree, AnswerMap } from "./types";
 import chalk from "chalk";
+const packageInfo = require('../../package.json');
 
 const _outputDirQuestion: QuestionTree = {
     name: "outputPath",
@@ -95,7 +96,7 @@ const bannerText = String.raw`
      | |_| | | |_| | | | | (__  |   <  \__ \ | |_  | (_| | | |    | |_
       \__\_\  \__,_| |_|  \___| |_|\_\ |___/  \__|  \__,_| |_|     \__|
 `;
-const version = process.env.npm_package_version;
+const version = packageInfo.version;
 const leadInText = `
 \nWelcome to the Quorum Developer Quickstart utility. This tool can be used
 to rapidly generate local Quorum blockchain networks for development purposes
