@@ -95,7 +95,7 @@ const bannerText = String.raw`
      | |_| | | |_| | | | | (__  |   <  \__ \ | |_  | (_| | | |    | |_
       \__\_\  \__,_| |_|  \___| |_|\_\ |___/  \__|  \__,_| |_|     \__|
 `;
-
+const version = process.env.npm_package_version;
 const leadInText = `
 \nWelcome to the Quorum Developer Quickstart utility. This tool can be used
 to rapidly generate local Quorum blockchain networks for development purposes
@@ -106,7 +106,7 @@ installed, then answer the following questions.\n\n`;
 
 export const rootQuestion: QuestionTree = {
     name: "clientType",
-    prompt: `${bannerText}${leadInText}Which Ethereum client would you like to run? Default: [1]`,
+    prompt: `${bannerText}v${version}${leadInText}Which Ethereum client would you like to run? Default: [1]`,
     options: [
         // TODO: fix these to the correct names
         { label: "Hyperledger Besu", value: "besu", nextQuestion: _privacyQuestion, default: true },
