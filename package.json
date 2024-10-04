@@ -13,9 +13,9 @@
   "bin": "./index.js",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint \"./src/**\"",
-    "lintAndFix": "eslint --fix './src/**\"",
-    "prepare": "tsc && eslint --fix './src/**\"",
+    "lint": "eslint './src/**'",
+    "lintAndFix": "eslint --fix './src/**'",
+    "prepare": "tsc && eslint --fix './src/**'",
     "start": "node build/index.js"
   },
   "devDependencies": {
