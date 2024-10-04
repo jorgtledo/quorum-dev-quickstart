@@ -96,7 +96,7 @@ const bannerText = String.raw`
      | |_| | | |_| | | | | (__  |   <  \__ \ | |_  | (_| | | |    | |_
       \__\_\  \__,_| |_|  \___| |_|\_\ |___/  \__|  \__,_| |_|     \__|
 `;
-const version = packageInfo.version;
+const version = packageInfo? packageInfo.version : '';
 const leadInText = `
 \nWelcome to the Quorum Developer Quickstart utility. This tool can be used
 to rapidly generate local Quorum blockchain networks for development purposes
